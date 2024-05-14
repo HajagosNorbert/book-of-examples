@@ -1,6 +1,4 @@
-interface PrioQueue
-    exposes [empty, enqueue, dequeue]
-    imports []
+module [empty, enqueue, dequeue]
 
 PrioQueue item a := { data : List item, priority : item -> Num a }
 

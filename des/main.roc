@@ -1,17 +1,19 @@
-app "des"
-    packages {
-        pf: "https://github.com/roc-lang/basic-cli/releases/download/0.8.1/x8URkvfyi9I0QhmVG98roKBUs_AZRkLFwFJVJ3942YA.tar.br",
-        random: "https://github.com/lukewilliamboswell/roc-random/releases/download/0.1.0/OoD8jmqBLc0gyuaadckDMx1jedEa03EdGSR_V4KhH7g.tar.br",
-    }
-    imports [pf.Stdout, random.Random, PrioQueue, Queue]
-    provides [main] to pf
+app [main] {
+    pf: platform "https://github.com/roc-lang/basic-cli/releases/download/0.10.0/vNe6s9hWzoTZtFmNkvEICPErI9ptji_ySjicO6CkucY.tar.br",
+    random: "https://github.com/lukewilliamboswell/roc-random/releases/download/0.1.0/OoD8jmqBLc0gyuaadckDMx1jedEa03EdGSR_V4KhH7g.tar.br",
+}
+
+import pf.Stdout
+import random.Random
+import PrioQueue
+import Queue
 
 timeAfterArrivalsStop = 100
 triageTime = 6
 interactionTime = 5
 interArrivalTimeMin = 2
 interArrivalTimeMax = 3
-expect interArrivalTimeMin <= interArrivalTimeMax 
+expect interArrivalTimeMin <= interArrivalTimeMax
 
 defaultWorld =
     seed = 42

@@ -1,6 +1,4 @@
-interface Queue
-    exposes [empty, find, getAt, setAt, len, enqueue, dequeue]
-    imports []
+module [empty, find, getAt, setAt, len, enqueue, dequeue]
 
 Queue a := {
     data : List a,
